@@ -8,7 +8,7 @@ This module provides the community KIE Server image.
 KIE Server
 ==========
 
-KIE Server provides an standalone Drools execution environment to execute your Drools rules.                        
+KIE Server provides an standalone Business-Central execution environment to execute your "Drools" rules.                        
 
 There are two available images:                
 

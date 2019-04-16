@@ -1,7 +1,7 @@
-Drools KIE Server showcase Docker image
-=======================================
+KIE Server showcase Docker image
+================================
 
-Drools KIE Server showcase [Docker](http://docker.io/) image.
+KIE Server showcase [Docker](http://docker.io/) image.
 
 More information of KIE Server available at [JBoss documentation](http://docs.jboss.org/drools/release/7.20.0.Final/drools-docs/html_single/#_ch.kie.server).
 
@@ -23,9 +23,9 @@ Introduction
 The image contains: 
               
 * JBoss Wildfly 14.0.1.Final
-* JBoss Drools KIE Server 7.20.0.Final
+* JBoss KIE Server 7.20.0.Final
 
-This is a **ready to run Docker image for Drools KIE Server**. Just run it and try the Drools runtime execution server!                   
+This is a **ready to run Docker image for KIE Server**. Just run it and try the KIE runtime execution server!                   
 
 Usage
 -----
@@ -34,15 +34,15 @@ The JBoss KIE Execution server is intended to be used as a standalone runtime ex
 
 Once having a KIE Drools Workbench or a jBPM Workbench application container running, you can run several execution server instances linked with your workbench by running:                                 
     
-    # NOTE: Consider 'drools-wb' as the name of your Drools workbench running container.     
-    docker run -p 8180:8080 -d --name kie-server --link drools-wb:kie-wb jboss/kie-server-showcase:latest
+    # NOTE: Consider 'business-central-wb' as the name of your business-central-workbench-showcase running container.     
+    docker run -p 8180:8080 -d --name kie-server --link business-central-wb:kie-wb jboss/kie-server-showcase:latest
 
 Note: Port `8080` is bind to port `8180` on the docker host considering that `drools-wb` container is already using it.         
  
 As in the above example, the use of the link alias `kie-wb` produces:               
   
-* Use of your `drools-wb` container as the controller for the execution server.                     
-* The repository in the Maven settings, for consuming your artifacts from the `drools-wb` container, is automatically set.                    
+* Use of your `business-central-wb` container as the controller for the execution server.                     
+* The repository in the Maven settings, for consuming your artifacts from the `business-central-wb` container, is automatically set.                    
 
 So at the point the execution server container is up and running, this server instance will be automatically detected and available in your Drools/jBPM Workbench application, so you can deploy and run your application rules, etc into it.                 
 
@@ -94,9 +94,9 @@ Notes
 -----
 
 * The context path for Drools KIE Server application services is `kie-server`
-* Drools KIE Server version is `7.20.0.Final`
-* Drools KIE Server requires running JBoss Wildfly 14.0.1.Final using the `full` server profile
-* In order to perform container linking with a jBPM / Drools Workbench image, the link alias must be `kie-wb`       
+* KIE Server version is `7.20.0.Final`
+* KIE Server requires running JBoss Wildfly 14.0.1.Final using the `full` server profile
+* In order to perform container linking with a Business-Central Workbench image, the link alias must be `kie-wb`       
 * No support for clustering                
 * This image is not intended to be run on cloud environments such as RedHat OpenShift or Amazon EC2, as it does not meet all the requirements.                      
 * Please give us your feedback or report a issue at [Drools Setup](https://groups.google.com/forum/#!forum/drools-setup) or [Drools Usage](https://groups.google.com/forum/#!forum/drools-usage) Google groups.              

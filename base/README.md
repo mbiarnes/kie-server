@@ -1,7 +1,7 @@
-Drools KIE Server Docker image
+Business-Central KIE Server Docker image
 ===============================
 
-Drools KIE Server [Docker](http://docker.io/) image.
+Business-Central KIE Server [Docker](http://docker.io/) image.
 
 More information of KIE Server available at [JBoss documentation](https://docs.jboss.org/drools/release/7.20.0.Final/drools-docs/html_single/#_ch.kie.server).
 
@@ -23,9 +23,9 @@ Introduction
 The image contains:    
            
 * JBoss Wildfly 14.0.1.Final
-* JBoss Drools KIE Server 7.20.0.Final
+* JBoss KIE Server 7.20.0.Final
 
-This image provides the Drools KIE Server. It's intended to be extended so you can add your custom configurations.                 
+This image provides the KIE Server. It's intended to be extended so you can add your custom configurations.                 
 
 If you don't want to extend this image and you just want to try Drools KIE Server take a look at the `jboss/kie-server-showcase:latest` Docker image, it contains some default configurations.                   
 
@@ -55,7 +55,7 @@ The application have no users or roles configured, so you cannot not access it b
 
 In order to use it, at least you have to create an application user in JBoss Wildfly with role `kie-server`.                  
 
-If you are looking for a Drools KIE Server image that does not require to add custom configurations, try our `jboss/kie-server-showcase:latest` Docker image.
+If you are looking for a KIE Server image that does not require to add custom configurations, try our `jboss/kie-server-showcase:latest` Docker image.
 
 If you want to create your custom configuration and users, role, etc, you can take a look at section `Extending this image`.    
 
@@ -71,7 +71,7 @@ You can attach the container by running:
 
     docker attach <container_id>
 
-The Drools KIE Server web application logs can be found inside the container at path:
+The KIE Server web application logs can be found inside the container at path:
 
     /opt/jboss/wildfly/standalone/log/server.log
 
@@ -154,8 +154,8 @@ Notes
 -----
 
 * The context path for Drools KIE Server application services is `kie-server`
-* Drools KIE Server version is `7.20.0.Final`
-* Drools KIE Server requires running JBoss Wildfly 14.0.1.Final using the `full` server profile
+* KIE Server version is `7.20.0.Final`
+* KIE Server requires running JBoss Wildfly 14.0.1.Final using the `full` server profile
 * No users or roles are configured by default               
 * No support for clustering                
 * This image is not intended to be run on cloud environments such as RedHat OpenShift or Amazon EC2, as it does not meet all the requirements.                      
